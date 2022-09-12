@@ -26,8 +26,13 @@ $PAGE->set_url(new moodle_url('/local/message/manage.php'));
 $PAGE->set_context(\context_system::instance());
 $PAGE->set_title('manage messages');
 
+
 echo $OUTPUT->header();
 
-echo '<h1>hello</h1>';
+$templatecontext = (object)[
+    'texttodisplay' => 'here is some text'
+];
+
+echo $OUTPUT->render_from_template('local_message/manage', $templatecontext);
 
 echo $OUTPUT->footer();
