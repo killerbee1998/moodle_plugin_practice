@@ -20,6 +20,12 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
+
+// forms/edit_form.php
  $string['enter_msg'] = 'Please enter a message';
  $string['msg_txt'] = 'Message Text';
  $string['msg_type'] = 'Message Type';
+
+//  edit.php
+$string['cancel_form'] = "You cancelled the message";
+$string['create_form'] = "You created a message with title ";

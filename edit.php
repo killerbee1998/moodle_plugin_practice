@@ -36,7 +36,7 @@ $mform = new edit_form($actionUrl);
 if ($mform->is_cancelled()) {
   //Handle form cancel operation, if cancel button is present on form
 
-  redirect($CFG->wwwroot . '/local/message/manage.php', "You cancelled the message");
+  redirect($CFG->wwwroot . '/local/message/manage.php', get_string('cancel_form', 'local_message'));
 } else if ($fromform = $mform->get_data()) {
   //In this case you process validated data. $mform->get_data() returns data posted in form.
   $recordtoinsert = new stdClass();
@@ -44,7 +44,7 @@ if ($mform->is_cancelled()) {
   $recordtoinsert->messagetype = $fromform->messagetype;
 
   $DB->insert_record('local_message', $recordtoinsert);
-  redirect($CFG->wwwroot . '/local/message/manage.php', "You created a message with title ". $fromform->messagetext);
+  redirect($CFG->wwwroot . '/local/message/manage.php', get_string('create_form', 'local_message'). $fromform->messagetext);
 }
 echo $OUTPUT->header();
 
