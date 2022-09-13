@@ -21,6 +21,6 @@
  */
 
 
- function local_message_before_footer(){
-    \core\notification::add("this is a message", \core\output\notification::NOTIFY_WARNING);
- }
+//  function local_message_before_footer(){
+//     \core\notification::add("this is a message", \core\output\notification::NOTIFY_WARNING);
+//  }

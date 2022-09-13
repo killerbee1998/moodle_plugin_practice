@@ -21,13 +21,15 @@
  */
 
 require_once(__DIR__ . '/../../config.php');
-require_once($CFG->dirroot. '/local/message/classes/form/edit.php');
+require_once($CFG->dirroot. '/local/message/classes/form/edit_form.php');
 
-$PAGE->set_url(new moodle_url('/local/message/edit.php'));
+$actionUrl = new moodle_url('/local/message/edit.php');
+
+$PAGE->set_url($actionUrl);
 $PAGE->set_context(\context_system::instance());
 $PAGE->set_title('Edit');
 
-$mform = new edit();
+$mform = new edit_form($actionUrl);
 
 echo $OUTPUT->header();
 
