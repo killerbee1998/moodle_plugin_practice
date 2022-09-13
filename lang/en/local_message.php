@@ -29,3 +29,7 @@
 //  edit.php
 $string['cancel_form'] = "You cancelled the message";
 $string['create_form'] = "You created a message with title ";
+$string['edit_msg'] = "Edit Messages";
+
+// manage.php
+$string['manage_msg'] = "Manage Messages";

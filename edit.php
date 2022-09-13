@@ -28,7 +28,7 @@ $actionUrl = new moodle_url('/local/message/edit.php');
 
 $PAGE->set_url($actionUrl);
 $PAGE->set_context(\context_system::instance());
-$PAGE->set_title('Edit');
+$PAGE->set_title(get_string('edit_msg', 'local_message'));
 
 $mform = new edit_form($actionUrl);
 
