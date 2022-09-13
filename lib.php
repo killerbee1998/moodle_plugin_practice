@@ -21,6 +21,20 @@
  */
 
 
-//  function local_message_before_footer(){
-//     \core\notification::add("this is a message", \core\output\notification::NOTIFY_WARNING);
-//  }
+function local_message_before_footer() {
+    global $DB;
+    $messages = $DB->get_records('local_message');
+    $types = [
+        '0' => \core\output\notification::NOTIFY_WARNING,
+        '1' => \core\output\notification::NOTIFY_SUCCESS,
+        '2' => \core\output\notification::NOTIFY_ERROR,
+        '3' => \core\output\notification::NOTIFY_INFO
+    ];
+
+    
+    foreach($messages as $message){
+        var_dump($types[$message->messagetype]); 
+        \core\notification::add($message->messagetext, $types[$message->messagetype]);
+    }
+
+}
