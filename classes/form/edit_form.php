@@ -40,6 +40,15 @@ class edit_form extends moodleform {
         $mform->setType('messagetext', PARAM_NOTAGS);                   // Set type of element.
         $mform->setDefault('messagetext', 'Please enter message');        // Default value.
 
+        $choices = array();
+        $choices['0'] = \core\output\notification::NOTIFY_WARNING;
+        $choices['1'] = \core\output\notification::NOTIFY_SUCCESS;
+        $choices['2'] = \core\output\notification::NOTIFY_ERROR;
+        $choices['3'] = \core\output\notification::NOTIFY_INFO;
+        $mform->addElement('select',  'messageType',  'Message Type',  $choices);
+        $mform->setDefault('messageType', 3);
+        
+
     }
     //Custom validation should be added here
     function validation($data, $files) {
