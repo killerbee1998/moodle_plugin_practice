@@ -47,7 +47,8 @@ class edit_form extends moodleform {
         $choices['3'] = \core\output\notification::NOTIFY_INFO;
         $mform->addElement('select',  'messageType',  'Message Type',  $choices);
         $mform->setDefault('messageType', 3);
-        
+
+        $this->add_action_buttons();
 
     }
     //Custom validation should be added here
