@@ -36,11 +36,10 @@ class edit_form extends moodleform {
        
         $mform = $this->_form; // Don't forget the underscore! 
 
-        $mform->addElement('text', 'email', get_string('email')); // Add elements to your form.
-        $mform->setType('email', PARAM_NOTAGS);                   // Set type of element.
-        $mform->setDefault('email', 'Please enter email');        // Default value.
+        $mform->addElement('text', 'messagetext', 'Message Text'); // Add elements to your form.
+        $mform->setType('messagetext', PARAM_NOTAGS);                   // Set type of element.
+        $mform->setDefault('messagetext', 'Please enter message');        // Default value.
 
-        $this->add_action_buttons();
     }
     //Custom validation should be added here
     function validation($data, $files) {

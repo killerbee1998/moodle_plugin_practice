@@ -33,6 +33,6 @@ $mform = new edit_form($actionUrl);
 
 echo $OUTPUT->header();
 
-$mfrom->display();
+$mform->display();
 
 echo $OUTPUT->footer();
