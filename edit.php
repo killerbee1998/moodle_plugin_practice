@@ -44,7 +44,7 @@ if ($mform->is_cancelled()) {
   $recordtoinsert->messagetype = $fromform->messagetype;
 
   $DB->insert_record('local_message', $recordtoinsert);
-  redirect($CFG->wwwroot . '/local/message/manage.php', "You created a message");
+  redirect($CFG->wwwroot . '/local/message/manage.php', "You created a message with title ". $fromform->messagetext);
 }
 echo $OUTPUT->header();
 
