@@ -44,7 +44,6 @@ function local_message_before_footer() {
 
     
     foreach($messages as $message){
-        var_dump($types[$message->messagetype]); 
         \core\notification::add($message->messagetext, $types[$message->messagetype]);
 
         $readrecord = new stdClass();
